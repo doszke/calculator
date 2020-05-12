@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+<div class="container">
+    <div class="header">Mean calculator</div>
+    <form action="#" th:action="@{/}" th:method="post">
+        <p>first number:
+            <label>
+                <input class="text" type="text" name="a"/>
+            </label>
+        </p>
+        <p>second number:
+            <label>
+                <input class="text" type="text" name="b"/>
+            </label>
+        </p>
+        <p>third number:
+            <label>
+                <input class="text" type="text" name="c"/>
+            </label>
+        </p>
+        <div>
+            <label><input type="radio" checked th:text="arithmetic" value="arithmetic" name="mode"/></label><br>
+            <label><input type="radio" th:text="geometric" value="geometric" name="mode"/></label><br>
+            <label><input type="radio" th:text="harmonic" value="harmonic" name="mode"/></label><br>
+        </div>
+        <label>
+            <span class="error" th:if="${error!=null}" th:text="${error}"></span>
+        </label>
+
+        <label>
+            <input class="sub" type="submit" value="submit"/>
+        </label>
+    </form>
+    <div th:if="${res != null}" th:text="${'Result: ' + res}"></div>
+</div>
+
+</body>
+</html>
