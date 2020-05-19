@@ -2,9 +2,19 @@ package com.doszke.calculator.service
 
 import org.springframework.stereotype.Service
 
+/**
+ * Class used for parsing numbers passed by the user.
+ */
 @Service
 class NumberParserService {
 
+    /**
+     * Method used for parsing numbers passed by the user.
+     * @param a first String
+     * @param b second String
+     * @param c third String
+     * @return array of doubles
+     */
     fun parse(a: String, b: String, c: String): Array<Double> {
         val aa = a.toDouble()
         val bb = b.toDouble()

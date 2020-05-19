@@ -1,5 +1,8 @@
 package com.doszke.calculator.engine
 
+/**
+ * Interface defining multiple means.
+ */
 interface CalculatorEngine {
 
     fun arithmetic(args: Array<Double>): Double

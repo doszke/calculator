@@ -28,6 +28,11 @@
             <label><input type="radio" th:text="geometric" value="geometric" name="mode"/></label><br>
             <label><input type="radio" th:text="harmonic" value="harmonic" name="mode"/></label><br>
         </div>
+        <p>precision:
+            <label>
+                <input class="text" type="number" name="precision" th:value="3" />
+            </label>
+        </p>
         <label>
             <span class="error" th:if="${error!=null}" th:text="${error}"></span>
         </label>
